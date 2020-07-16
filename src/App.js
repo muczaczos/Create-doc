@@ -6,6 +6,7 @@ import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SingIn';
 import SignUp from './components/auth/SingUp';
 import CreateProject from './components/projects/CreateProject';
+import CreateDocument from './components/documents/CreateDocument';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/create" component={CreateProject} />
+          <Route path="/createDoc" component={CreateDocument} />
         </Switch>
       </div>
     </BrowserRouter>
