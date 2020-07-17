@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
   project: projectReducer,
   firestore: firestoreReducer,
   firebase: firebaseReducer,
+  gon: documentRReducer,
 });
 
 export default rootReducer;
