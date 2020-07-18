@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { Component } from "react";
+import { addCustomer } from "../../store/actions/documentActions";
+import { connect } from "react-redux";
 
-function handleClick(e) {
-  e.preventDefault();
-  console.log('The link was clicked.');
+export class CustomButton extends Component {
+  handleClick = (e) => {
+    e.preventDefault();
+    //console.log(this.state);
+    this.props.addCustomer(e.target.innerText);
+  };
+
+  render() {
+    return (
+      <button className="custombutton btn" onClick={this.handleClick}>
+        {this.props.text}
+      </button>
+    );
+  }
 }
 
-const CustomButton = ({ text }) => {
-  const buttonText = text;
-  return (
-    <button className="custombutton btn" onClick={handleClick}>
-      {buttonText}
-    </button>
-  );
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addCustomer: (customer) => dispatch(addCustomer(customer)),
+  };
 };
 
-export default CustomButton;
+export default connect(null, mapDispatchToProps)(CustomButton);

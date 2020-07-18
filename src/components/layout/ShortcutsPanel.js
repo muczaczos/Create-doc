@@ -1,13 +1,14 @@
-import React from 'react';
-import CustomButton from './CustomButton';
+import React from "react";
+import CustomButton from "./CustomButton";
 
-const ShortcutsPanel = () => {
+const ShortcutsPanel = (props) => {
+  const newGon = props.newGon;
   return (
     <div className="spanel">
       <div className="customers center">
         <h5>Customers</h5>
         <div className="selement">
-          <CustomButton text="Cerozfrucht" />
+          <CustomButton text="Cerozfrucht" newGon={newGon} />
           <CustomButton text="Czamar Trans" />
           <CustomButton text="Lukpol" />
           <CustomButton text="Vegapol" />
@@ -23,7 +24,7 @@ const ShortcutsPanel = () => {
         <h5>Reciepients</h5>
         <div className="selement">
           <CustomButton text="Nehvizdy" />
-          <CustomButton text="Velka Bystrica" />
+          <CustomButton text="Olomouc" />
           <CustomButton text="Senec" />
           <CustomButton text="Paczyński" />
           <CustomButton text="Nowocin" />

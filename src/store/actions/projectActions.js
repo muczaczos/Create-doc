@@ -6,7 +6,7 @@ export const createProject = (project) => {
     const authorId = getState().firebase.auth.uid;
 
     firestore
-      .collection('projects')
+      .collection("projects")
       .add({
         ...project,
         authorFirstName: profile.firstName,
@@ -15,10 +15,10 @@ export const createProject = (project) => {
         createDat: new Date(),
       })
       .then(() => {
-        dispatch({ type: 'CREATE_PROJECT', project });
+        dispatch({ type: "CREATE_PROJECT", project });
       })
       .catch((err) => {
-        dispatch({ type: 'CREATE_PROJECT_ERROR', err });
+        dispatch({ type: "CREATE_PROJECT_ERROR", err });
       });
   };
 };
