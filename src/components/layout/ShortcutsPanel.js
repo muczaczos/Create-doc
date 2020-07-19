@@ -2,13 +2,12 @@ import React from "react";
 import CustomButton from "./CustomButton";
 
 const ShortcutsPanel = (props) => {
-  const newGon = props.newGon;
   return (
     <div className="spanel">
       <div className="customers center">
         <h5>Customers</h5>
         <div className="selement">
-          <CustomButton text="Cerozfrucht" newGon={newGon} />
+          <CustomButton text="Cerozfrucht" />
           <CustomButton text="Czamar Trans" />
           <CustomButton text="Lukpol" />
           <CustomButton text="Vegapol" />

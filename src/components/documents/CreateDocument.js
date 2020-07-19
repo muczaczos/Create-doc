@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ShortcutsPanel from "../layout/ShortcutsPanel";
+import GonPanel from "../layout/GonPanel";
 import { connect } from "react-redux";
 
 export class CreateDocument extends Component {
@@ -12,6 +13,7 @@ export class CreateDocument extends Component {
     return (
       <div className="doccreator">
         <ShortcutsPanel newGon={newGon} />
+        <GonPanel />
         <p> {newGon.customer}</p>
       </div>
     );
