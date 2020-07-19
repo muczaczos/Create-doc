@@ -1,7 +1,14 @@
 import React from "react";
 import GonCustomButton from "./GonCustomButton";
+import Select from "react-dropdown-select";
 
 const GonPanel = (props) => {
+  var values = ["dupa", "kupa", "zupa"];
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
   return (
     <div className="gpanel">
       <div className="functions center">
@@ -16,7 +23,16 @@ const GonPanel = (props) => {
       <div className="gon center">
         <h5>GON</h5>
         <div className="gelement">
-          <label for="pet-select">Choose a product:</label>
+          <Select
+            options={options}
+            onChange={(values) => this.setValues(values)}
+          />
+
+          {/*}  <Select
+            value={selectedOption}
+            onChange={this.handleChange}
+            options={options}
+  /> */}
         </div>
       </div>
     </div>
